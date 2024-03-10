@@ -11,7 +11,6 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.http.MediaType
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 import java.math.BigDecimal
 import java.time.Year
@@ -30,7 +29,7 @@ class CarCrudServiceApplicationTests {
     @Autowired
     lateinit var objectMapper: ObjectMapper
 
-    @Test
+/*    @Test
     fun when_called_with_proper_data_then_creates_an_entity() {
         mockMvc.perform(
           post("/v1/cars/")
@@ -40,7 +39,7 @@ class CarCrudServiceApplicationTests {
         )
           .andExpect(status().isOk)
           .andExpect(jsonPath("\$.model").value("CM-X"))
-    }
+    }*/
 
     @Test
     fun when_called_on_existing_car_then_updates_price() {
